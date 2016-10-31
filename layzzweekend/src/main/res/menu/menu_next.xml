@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+   <item android:id="@+id/menu_locaouser_next" android:icon="@drawable/ic_nav_right" android:title="下一步" app:showAsAction="always"></item>
+</menu>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.layzzweekend.ui.SecondDetailActivity">
+   <ImageView
+       android:id="@+id/seconddetail_back_img"
+       android:layout_width="35dp"
+       android:layout_height="35dp"
+       android:onClick="click"
+       android:src="@drawable/ic_nav_left"/>
+    <TextView
+        android:id="@+id/seconddetail_title_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_centerHorizontal="true"
+        android:textSize="20sp"/>
+    <com.handmark.pulltorefresh.library.PullToRefreshListView
+        android:id="@+id/seconddetail_pull_listview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/seconddetail_back_img" >
+    </com.handmark.pulltorefresh.library.PullToRefreshListView>
+</RelativeLayout>
