@@ -12,6 +12,7 @@ import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ProgressBar;
 import android.widget.RadioGroup;
 
 import com.baidu.location.Address;
@@ -33,6 +34,8 @@ public class ShowActivity extends AppCompatActivity implements BDLocationListene
     private List<Fragment> fragmentList = new ArrayList<>();
     private MyFragmentAdapter myFragmentAdapter;
     private LocationClient locationClient;
+    private ProgressBar mPragressBar;
+    private boolean isGetAddress;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -81,6 +84,19 @@ public class ShowActivity extends AppCompatActivity implements BDLocationListene
     }
 
     private void initView() {
+//        progressBar.setVisibility(View.VISIBLE);//可见，View.GONE为不可见
+//        progressBar.setProgress(value);//修改ProgressBar的值
+//        progressBar.getMax();//获取ProgressBar最大值
+//        mPragressBar = (ProgressBar) findViewById(R.id.show_pragressbar);
+//        // 开启一个线程 当百度地图请求到地址时，则进度条消失
+//        new Thread(new Runnable() {
+//            @Override
+//            public void run() {
+//                while (isGetAddress ){
+//                    mPragressBar.setVisibility(View.GONE);
+//                }
+//            }
+//        });
         mViewPager = (ViewPager) findViewById(R.id.show_viewpager);
         mRadioGroup = (RadioGroup) findViewById(R.id.show_radiogroup);
 //        SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(this);
@@ -162,6 +178,9 @@ public class ShowActivity extends AppCompatActivity implements BDLocationListene
         edit.putFloat(city+"latitude", (float) latitude);
         edit.putFloat(city+"longitude", (float) longitude);
         edit.apply();
+        if (city != null){
+            isGetAddress =true;
+        }
     }
 
     class  MyFragmentAdapter extends FragmentPagerAdapter{

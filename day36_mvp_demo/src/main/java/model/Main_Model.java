@@ -40,7 +40,6 @@ public class Main_Model  {
             public void onCancelled(CancelledException cex) {
 
             }
-
             @Override
             public void onFinished() {
 

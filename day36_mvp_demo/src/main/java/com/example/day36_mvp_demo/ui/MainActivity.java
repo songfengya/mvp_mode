@@ -11,11 +11,14 @@ import com.example.day36_mvp_demo.view.IMainView;
 
 import java.util.List;
 
+import butterknife.BindView;
+import butterknife.Unbinder;
+
 /**
  *  mvp View activity+layout 布局文件
  */
 public class MainActivity extends AppCompatActivity implements IMainView{
-
+   @BindView(R.id.main_txt)
     private TextView mTxt;
 
     @Override

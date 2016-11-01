@@ -4,6 +4,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.layzzweekend.ui.ShowActivity">
+ <!--<ProgressBar-->
+     <!--android:id="@+id/show_pragressbar"-->
+     <!--android:layout_width="wrap_content"-->
+     <!--android:layout_height="wrap_content"-->
+     <!--android:layout_centerInParent="true"-->
+     <!--android:indeterminateDrawable="@drawable/logining"/>-->
    <android.support.v4.view.ViewPager
        android:id="@+id/show_viewpager"
        android:layout_width="match_parent"

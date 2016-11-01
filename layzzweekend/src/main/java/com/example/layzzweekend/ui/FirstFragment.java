@@ -124,7 +124,9 @@ public class FirstFragment extends Fragment implements IViewResult {
         public MyListViewAdapter(Context context) {
             this.myInflater = LayoutInflater.from(context);
         }
+        protected void onProgressUpdate(Integer... values){
 
+        }
         @Override
         public int getCount() {
             return beenList == null ? 0 : beenList.size();
